@@ -1,9 +1,9 @@
 const express = require('express')
 const app = express()
-
+const PORT = process.env.PORT || 3333
 
 app.get('/', (req, res) =>
-  res.send('hello new git?')
+  res.send('hello new port listener')
 )
 
-app.listen(3333, () => console.log("hello world listening on port 3333!"))
+app.listen(PORT, () => console.log("hello world listening on port " + PORT ))
